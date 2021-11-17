@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/dacbc9cdc5.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://use.fontawesome.com/dacbc9cdc5.js"></script>
+
+  <title>Landing Page...</title>
+</head>
+<body>
+  <div class="btn">
+    <span class="fas fa-bars"></span>
+  </div>
+  <nav class="sidebar">
+    <img src="images/user.png" class="menu-img" alt="">
+    <div class="text">Moinuddin</div>
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li>
+        <a href="#" class="feat-btn">Features
+          <span class="fas fa-caret-down first"></span>
+        </a>
+        <ul class="feat-show">
+          <li><a href="#">Animation</a></li>
+          <li><a href="#">Performance</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="serv-btn">Services
+          <span class="fas fa-caret-down second"></span>
+        </a>
+      </li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Setting</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+      <h1>Click below button for Popup</h1>
+      <a href="#" id="button">popup</a>
+  </div>
+  <div class="popup">
+    <div class="popup-content">
+      <img src="images/user.png" class="user-img" alt="user-img">
+      <img src="images/close.png" class="close" alt="close-button">
+      <input type="text" placeholder="Username" name="" id="">
+      <input type="password" placeholder="Password" name="" id="">
+      <a href="" id="button">Login</a>
+    </div>
+  </div>
+
+  <script>
+  $('.btn').click(function(){
+    $(this).toggleClass("click");
+    $('.sidebar').toggleClass("show");
+  });
+    $('.feat-btn').click(function(){
+      $('nav ul .feat-show').toggleClass("show");
+      $('nav ul .first').toggleClass("rotate");
+    });
+    $('.serv-btn').click(function(){
+      $('nav ul .serv-show').toggleClass("show1");
+      $('nav ul .second').toggleClass("rotate");
+    });
+    $('nav ul li').click(function(){
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+
+    document.getElementById("button").addEventListener("click", function(){
+      document.querySelector(".popup").style.display = "flex";
+    })
+
+    document.querySelector(".close").addEventListener("click", function(){
+      document.querySelector(".popup").style.display = "none";
+    })
+  </script>
+
+</body>
+</html>
