@@ -14,6 +14,13 @@
   <title>Landing Page...</title>
 </head>
 <body>
+  <nav>
+      <h1 class="heading">Landing Page.......</h1>
+      <!-- <a href="" class="button-reg">Register Here</a> -->
+      <div class="content">
+      <a href="#" id="login-btn">Login</a>
+  </div>
+  </nav>
   <div class="btn">
     <span class="fas fa-bars"></span>
   </div>
@@ -23,7 +30,7 @@
     <ul>
       <li class="active"><a href="#">Home</a></li>
       <li>
-        <a href="#" class="feat-btn">Features
+        <a href="#" class="feat-btn">Education
           <span class="fas fa-caret-down first"></span>
         </a>
         <ul class="feat-show">
@@ -40,20 +47,28 @@
       <li><a href="#">Setting</a></li>
     </ul>
   </nav>
-  <div class="content">
-      <h1>Click below button for Popup</h1>
-      <a href="#" id="button">popup</a>
-  </div>
+  
   <div class="popup">
     <div class="popup-content">
       <img src="images/user.png" class="user-img" alt="user-img">
       <img src="images/close.png" class="close" alt="close-button">
       <input type="text" placeholder="Username" name="" id="">
       <input type="password" placeholder="Password" name="" id="">
-      <a href="" id="button">Login</a>
+      <a href="" id="button">Login</a>&nbsp;OR
+      <a href="" id="button">Register</a>
     </div>
   </div>
+  <div class="body-content">
+    <h1>Welcome to the page</h1>
 
+    <p>Hello everyone! My name is <i>Moinuddin</i>i completed <b>B.Tech</b> in 2021.</p><br>
+    <p>I got the best training platform for <i>full stack development.</i> the platform name is <i><b>Newton school</b>
+    </i>That platform is offering free course untill you got the job <b>5 LPA</b> for more detail visit <a href="https://newtonschool.co/">click here</a></p><br>
+    <p>for registration please click on the top right side button known as <b>Login</b></p>
+    <div class="img">
+      <img src="https://entrackr.com/wp-content/uploads/2021/02/NEWTON-SCHOOL.jpg" alt="">
+    </div>
+  </div>
   <script>
   $('.btn').click(function(){
     $(this).toggleClass("click");
@@ -71,7 +86,7 @@
       $(this).addClass("active").siblings().removeClass("active");
     });
 
-    document.getElementById("button").addEventListener("click", function(){
+    document.getElementById("login-btn").addEventListener("click", function(){
       document.querySelector(".popup").style.display = "flex";
     })
 
